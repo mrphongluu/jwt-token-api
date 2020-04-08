@@ -24,6 +24,7 @@ class CheckValidateTokenAdmin
         if ($payload['context']->role == 'admin') {
             return $next($request);
         }
+        
         return response()->json(['status' => 'Authorization Admin not found']);
     }
 }
